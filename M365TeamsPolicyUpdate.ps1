@@ -77,11 +77,17 @@ else
         Write-Host "Connection failed.";Start-sleep  3; Exit
     }
     Write-Host "CONNECTED"
-    Write-Host "-------------------- Get-CsExternalAccessPolicy (Shows this org's policies)"
+    # show orgwide settings
+    Write-Host "-------------------- Get-CsTenantFederationConfiguration (Shows this org's master setting)"
+    Write-Host "Adjust here: https://admin.teams.microsoft.com/company-wide-settings/external-communications"
+    Write-Host "Note: If these settings block external access, no users can get around it via policies. In this case the script only stages policies."
+    $tenant_config = Get-CsTenantFederationConfiguration
+    $tenant_config | Format-Table
     # show current policies
+    Write-Host "-------------------- Get-CsExternalAccessPolicy (Shows this org's policies)"
     $pol_curr = Get-CsExternalAccessPolicy
     $pol_curr | Select-Object Identity,EnableFederationAccess,EnableTeamsConsumerAccess | Format-Table | Out-String | Write-Host
-    # ######
+    # get entries from CSV
     $x = $entries[0]
     # Check policy names
     $pol_name_group = $x.GroupPolicyName
