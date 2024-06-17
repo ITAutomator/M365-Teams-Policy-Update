@@ -1,7 +1,7 @@
 ## M365 Teams Policy Update 
 User guide: [PDF](https://github.com/ITAutomator/M365-Teams-Policy-Update/blob/main/M365%20Teams%20Policy%20Update%20Readme.pdf)   
 Download: [ZIP](https://github.com/ITAutomator/M365-Teams-Policy-Update/archive/refs/heads/main.zip)   
-Website: [Blog](https://www.itautomator.com/m365-teams-policy-report-and-update/)  
+Website: [WWW](https://www.itautomator.com/m365-teams-policy-report-and-update/)  
 (or click the green *Code* button (above) and click *Download Zip*)    
 
 **Overview**   
